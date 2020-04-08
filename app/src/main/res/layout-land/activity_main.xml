@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="734dp"
+        android:layout_height="410dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="452dp"
+            android:layout_height="53dp"
+            android:layout_gravity="top|left"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="4dp"
+            android:ems="10"
+            android:hint="Search Book"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/listfrag"
+            app:layout_constraintEnd_toStartOf="@+id/searchButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="122dp"
+            android:layout_height="54dp"
+            android:layout_gravity="right|top"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="292dp"
+            android:text="Search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/searchText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/listfrag"
+            android:name="temple.edu.bookcase.BookListFragment"
+            android:layout_width="255dp"
+            android:layout_height="278dp"
+            android:layout_gravity="bottom|left"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/detailfrag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchText"
+            app:layout_constraintVertical_bias="1.0">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/detailfrag"
+            android:name="temple.edu.bookcase.BookDetailsFragment"
+            android:layout_width="303dp"
+            android:layout_height="276dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="0.6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/listfrag">
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
